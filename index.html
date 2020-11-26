@@ -7,6 +7,21 @@
 <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0"/>
 <title>HongruiZheng NetWork</title>
 <meta charset="UTF-8" />
+<script type="text/javascript">
+var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+var browser = navigator.userAgent.toLowerCase();
+var isMobile = false;
+for (var i=0; i<mobileAgent.length; i++)
+{
+	if(browser.indexOf(mobileAgent[i])!=-1)
+	{
+		isMobile = true;
+		//alert(mobileAgent[i]);
+		location.href = './mobile.html';
+		break;
+	}
+}
+</script>
 <style>
   body {
     background: url(./photo/background.jpg) no-repeat center center fixed;
