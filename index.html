@@ -4,23 +4,16 @@
 <link rel="icon" href="./ico/mc.ico" type="image/x-icon">
 <link rel="shortcut icon" href="./ico/mc.ico" type="image/x-icon">
 <title>HongruiZheng NetWork</title>
-if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
-if(window.location.href.indexOf("?mobile")<0){
-try{
-if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
-window.location.href=“mindex.html”;
-
-}else if(/iPad/i.test(navigator.userAgent)){
-}else{
-window.location.href="cindex.html”
-
-}
-
-}catch(e){}
-
-}
-
-}
+var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+    var browser = navigator.userAgent.toLowerCase();
+    var isMobile = false;
+    for (var i = 0; i < mobileAgent.length; i++) {
+        if (browser.indexOf(mobileAgent[i]) != -1) {
+            isMobile = true;
+            location.href = './mindex.html';
+            break;
+        }
+    }
 </head>
 <body>
 </body>
