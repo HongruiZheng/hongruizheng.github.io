@@ -4,16 +4,21 @@
 <link rel="icon" href="./ico/mc.ico" type="image/x-icon">
 <link rel="shortcut icon" href="./ico/mc.ico" type="image/x-icon">
 <title>HongruiZheng NetWork</title>
+<script type="text/javascript">
 var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
-    var browser = navigator.userAgent.toLowerCase();
-    var isMobile = false;
-    for (var i = 0; i < mobileAgent.length; i++) {
-        if (browser.indexOf(mobileAgent[i]) != -1) {
-            isMobile = true;
-            location.href = './mindex.html';
-            break;
-        }
-    }
+var browser = navigator.userAgent.toLowerCase();
+var isMobile = false;
+for (var i=0; i<mobileAgent.length; i++)
+{
+	if(browser.indexOf(mobileAgent[i])!=-1)
+	{
+		isMobile = true;
+		//alert(mobileAgent[i]);
+		location.href = 'http://www.baidu.com';
+		break;
+	}
+}
+</script>
 </head>
 <body>
 </body>
